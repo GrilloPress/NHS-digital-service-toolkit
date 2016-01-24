@@ -27,10 +27,17 @@
   
   <body class="<%= page_classes %>">
     
+    <%= partial "partials/navbar" %>
     <div class="container">
-      <div class="row">
-          <%= yield %> 
-      </div>
+        <div class="row">
+            <div class="col-xs-7 col-sm-3 col-md-2 sidebar sidebar-left sidebar-animate sidebar-md-show">
+              <%= partial "partials/sidebar" %>
+            </div>
+          
+            <div class="main col-md-10 col-md-offset-2">
+              <%= yield %>
+            </div>
+        </div>
     </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
