@@ -30,13 +30,17 @@
     <%= partial "partials/navbar" %>
     <div class="container">
         <div class="row">
-            <div class="col-xs-7 col-sm-3 col-md-2 sidebar sidebar-left sidebar-animate sidebar-md-show">
-              <%= partial "partials/sidebar" %>
-            </div>
+          <div class="col-xs-7 col-sm-3 col-md-2 sidebar sidebar-left sidebar-animate sidebar-md-show">
+            <%= partial "partials/sidebar" %>
+          </div>
           
-            <div class="main col-md-10 col-md-offset-2">
-              <%= yield %>
-            </div>
+          <div class="col-md-7 col-md-offset-2 col-sm-8">
+            <%= yield %>
+          </div>
+          
+          <div class="col-md-3 col-sm-4">
+            <%= yield_content :sidebar_right %>
+          </div>
         </div>
     </div>
     
