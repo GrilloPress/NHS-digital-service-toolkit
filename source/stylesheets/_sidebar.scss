@@ -5,6 +5,12 @@
   margin-top: 3em;
   margin-left: 1em;
   
+  @media screen and (max-width: $screen-tablet){
+    
+    margin-left: 0;
+    
+  }
+  
 }
 
 // Inner page menu on left hand side that collapses
