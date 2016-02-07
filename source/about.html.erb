@@ -7,7 +7,14 @@ title: About
 <p class="lead">The NHS toolkit is a collection of articles, resources and downloads to help people create better digital services for the NHS</p>
 <p>The toolkit is cut into seperate modules that help shape some advice and guidance on building cost effective, user focused digital products - regardless of whether that product is for medical practitioners, related professionals, patients or the general public.</p>
 <p>This guide generally focuses on the methods available developers and researchers should use to generate quality user research and products with high quality user experience. Some general advice and pointers on UI and design is also given, though that is not the main focus of this toolkit.</p>
-
+<p>Available modules:</p>
+<ul>
+  <% data.modules.module.each do |x| %>
+      <% link_to x['slug'] do %>
+        <li><%= x['title'] %></li>
+      <% end %>
+  <% end %>
+</ul>
 <h2 id="contributors">Contributors</h2>
 <p>This project was created by <a href="https://twitter.com/AndrewDuck_" target="_blank">Andrew Duckworth</a></p>
 

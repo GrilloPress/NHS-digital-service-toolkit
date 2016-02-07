@@ -4,10 +4,16 @@ title: NHS Development Toolkit
 
 <h1><%= current_page.data.title %></h1>
 
-<p class="lead"><%= lorem.sentences 1 %></p>
-<p><%= lorem.paragraph %></p>
-<p><%= lorem.paragraph %></p>
-<p><%= lorem.paragraph %></p>
+<p class="lead">The NHS toolkit is a collection of articles, resources and downloads to help people create better digital services for the NHS</p>
+<p>The toolkit is cut into seperate modules that help shape some advice and guidance on building cost effective, user focused digital products - regardless of whether that product is for medical practitioners, related professionals, patients or the general public.</p>
+<p>Available modules:</p>
+<ul>
+  <% data.modules.module.each do |x| %>
+      <% link_to x['slug'] do %>
+        <li><%= x['title'] %></li>
+      <% end %>
+  <% end %>
+</ul>
 
 <% content_for :sidebar_right do %>
 <div class="panel panel-primary">
@@ -17,10 +23,8 @@ title: NHS Development Toolkit
   
   <ul class="list-group">
     <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Morbi leo risus</li>
-    <li class="list-group-item">Porta ac consectetur ac</li>
-    <li class="list-group-item">Vestibulum at eros</li>
   </ul>
 </div>
+
+<a role="button" href="https://github.com/GrilloPress/NHS-digital-service-toolkit" target="_blank">Github repo</a>
 <% end %>
