@@ -1,0 +1,32 @@
+---
+title: Modules
+---
+
+<h1><%= current_page.data.title %></h1>
+
+<% content_for :sidebar_right do %>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Sections</h3>
+  </div>
+  
+  <ul class="list-group">
+    <li class="list-group-item"><a href="#contributors"> ... </a></li>
+  </ul>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Modules</h3>
+  </div>
+  
+  <ul class="list-group">
+    <% data.modules.module.each do |x| %>
+      <% link_to x['slug'] do %>
+        <li class="list-group-item"><%= x['title'] %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
+
+<% end %>
