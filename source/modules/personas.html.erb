@@ -1,0 +1,40 @@
+---
+title: Personas
+---
+
+<h1><%= current_page.data.title %></h1>
+<p class="lead">Essential to any new project, and to successful products, is capturing user needs.</p>
+<p>One product we can use to capture those needs is the "Persona".</p>
+<p>A persona is a snapshot of either a potential or current user of your system. You create them to help inform your decisions. They also put a stake in the ground to where your team understands its users - for better or worse!</p>
+<p>What a persona actually looks like can vary from team to team and reseacher to researcher.</p>
+<p>At their heart, a persona is a product in which you sketch out a person, their wants and needs, their background and what they look and think like and because projects are different, and the people who create them are too, this means they are a varied product</p>
+<h2>General Patterns</h2>
+<p>A general pattern for personas are to feature an image, some basic biographical information and a reflection of that person's personality, either in quote or story form.</p>
+
+
+<% content_for :sidebar_right do %>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Sections</h3>
+  </div>
+  
+  <ul class="list-group">
+    <li class="list-group-item"> ... </li>
+  </ul>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Modules</h3>
+  </div>
+  
+  <ul class="list-group">
+    <% data.modules.module.each do |x| %>
+      <% link_to x['slug'] do %>
+        <li class="list-group-item"><%= x['title'] %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
+
+<% end %>
