@@ -9,9 +9,7 @@ title: NHS Development Toolkit
 <p>Available modules:</p>
 <ul>
   <% data.modules.module.each do |x| %>
-      <% link_to x['slug'] do %>
-        <li><%= x['title'] %></li>
-      <% end %>
+        <li><%= link_to x['title'],  x['slug'] %></li>
   <% end %>
 </ul>
 
