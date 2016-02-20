@@ -26,18 +26,6 @@ title: NHS Development Toolkit
   </ul>
 </div>
 
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h3 class="panel-title">Modules</h3>
-  </div>
-  
-  <ul class="list-group">
-    <% data.modules.module.each do |x| %>
-      <% link_to x['slug'] do %>
-        <li class="list-group-item"><%= x['title'] %></li>
-      <% end %>
-    <% end %>
-  </ul>
-</div>
+<%= partial "partials/sidebar-module.html.erb" %>
 
 <% end %>

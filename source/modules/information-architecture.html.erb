@@ -3,7 +3,9 @@ title: Information Architecture
 ---
 
 <h1><%= current_page.data.title %></h1>
-
+<p class="lead">Information architecture is the organisation of information to make it clear, underdtandable and accessible.</p>
+<p>In regards to websites, this relates to the processes and journey a user takes to find certain information.</p>
+<p>The most tangible and common output of information architecture is the creation of a "sitemap". A sitemap is the articulation of the required pages, content and functionality of a website or application.</p>
 
 <% content_for :sidebar_right do %>
 
@@ -19,19 +21,7 @@ title: Information Architecture
   </ul>
 </div>
 
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h3 class="panel-title">Modules</h3>
-  </div>
-  
-  <ul class="list-group">
-    <% data.modules.module.each do |x| %>
-      <% link_to x['slug'] do %>
-        <li class="list-group-item"><%= x['title'] %></li>
-      <% end %>
-    <% end %>
-  </ul>
-</div>
+<%= partial "partials/sidebar-module.html.erb" %>
 
 <div class="panel panel-primary">
   <div class="panel-heading">
@@ -40,7 +30,7 @@ title: Information Architecture
   
   <ul class="list-group">
     <li class="list-group-item">
-      ...
+      <a href="http://files.zemoga.com/2012/toolbox/ia/">IA toolkit (external)</a>
     </li>
   </ul>
 </div>

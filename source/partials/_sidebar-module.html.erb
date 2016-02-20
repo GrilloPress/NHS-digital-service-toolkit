@@ -1,0 +1,13 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Modules</h3>
+  </div>
+  
+  <ul class="list-group">
+    <% data.modules.module.each do |x| %>
+    <li class="list-group-item">
+      <%= link_to  x['title'], x['slug'] %>
+    </li>
+    <% end %>
+  </ul>
+</div>

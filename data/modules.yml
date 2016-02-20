@@ -2,4 +2,4 @@ module:
   - title: "Personas"
     slug: "/modules/personas.html"
   - title: "Information Architecture"
-    slug: "information-architecture.html"
+    slug: "/modules/information-architecture.html"

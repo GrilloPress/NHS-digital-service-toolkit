@@ -39,19 +39,7 @@ title: About
   </ul>
 </div>
 
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h3 class="panel-title">Modules</h3>
-  </div>
-  
-  <ul class="list-group">
-    <% data.modules.module.each do |x| %>
-      <% link_to x['slug'] do %>
-        <li class="list-group-item"><%= x['title'] %></li>
-      <% end %>
-    <% end %>
-  </ul>
-</div>
+<%= partial "partials/sidebar-module.html.erb" %>
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">NHS Digital Toolkit</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Andrew Duckworth</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
